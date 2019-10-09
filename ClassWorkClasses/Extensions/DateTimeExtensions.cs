@@ -16,5 +16,10 @@ namespace ClassWorkClasses.Extensions
                 ? 1 : 0);
             return difference;
         }
+
+        public static int GetCentury(this DateTime date)
+        {
+            return date.Year/100+1;
+        }
     }
 }
