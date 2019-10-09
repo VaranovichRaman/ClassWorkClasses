@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassWorkClasses.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ClassWorkClasses.Models
     {
         public string Name { get; set; }
 
-        public int Age { get { return Years(DateOfBirth, DateTime.Now); } }
+        public int Age { get { return DateOfBirth.GetYearsDiff(DateTime.Now); } }
         public DateTime DateOfBirth { get; set; }
 
         private int Years(DateTime start, DateTime end)
