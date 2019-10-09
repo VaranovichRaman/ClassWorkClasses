@@ -16,8 +16,13 @@ namespace ClassWorkClasses
             var kris = new Tolchok();
             kris.Name = "Kris";
             kris.DateOfBirth = new DateTime(1994, 6, 7);
-            kris.Club = ClubNames.Izmereniya;
-            Console.WriteLine($"age is {kris.Age}");
+            Console.WriteLine("select your club");
+            foreach (ClubNames club in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
+            {
+                Console.WriteLine($"{(int) club} - {club}");
+            }
+            kris.Club = (ClubNames) int.Parse(Console.ReadLine());
+            Console.WriteLine(kris.PrepareReport());
             if (kris.Club == ClubNames.Brigada)
             {
                 Console.WriteLine("100% Dexter enrolled!");
@@ -30,7 +35,7 @@ namespace ClassWorkClasses
             { 
                 Console.WriteLine("noname club"); 
             }
-            Console.WriteLine(kris.PrepareReport());
+            
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 
             Console.ReadLine();
