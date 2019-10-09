@@ -12,10 +12,10 @@ namespace ClassWorkClasses.Models
         public string Name { get; set; }
         public int Age { get { return DateOfBirth.GetYearsDiff(DateTime.Now); } }
         public DateTime DateOfBirth { get; set; }
-
-        public override string ToString()
+        public ClubNames Club { get; set; }
+        public string PrepareReport()
         {
-            return $"Tolchok {Name} is {Age} years old";
+            return $"Tolchok {Name} is {Age} years old is in {Club.ToString()}";
         }
 
     }
