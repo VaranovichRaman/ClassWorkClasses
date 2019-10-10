@@ -16,6 +16,8 @@ namespace ClassWorkClasses
             var kris = new Tolchok();
             kris.Name = "Kris";
             kris.DateOfBirth = new DateTime(1994, 6, 7);
+            kris.FavoriteWeapon.WeaponSize = 1;
+            Console.WriteLine(kris.FavoriteWeapon);
             Console.WriteLine("select your club");
             foreach (ClubNames club in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
             {
