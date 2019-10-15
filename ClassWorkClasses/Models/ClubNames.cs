@@ -8,11 +8,8 @@ namespace ClassWorkClasses.Models
 {
     public enum ClubNames
     {
-        Brigada, 
-        DSE,
-        Strazhi,
-        Izmereniya,
-        Izvrat,
-        Tintagel
+        OldCamp,
+        NewCamp,
+        SwampCamp
     }
 }

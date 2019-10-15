@@ -13,11 +13,12 @@ namespace ClassWorkClasses.Models
         public int Age { get { return DateOfBirth.GetYearsDiff(DateTime.Now); } }
         public Weapon FavoriteWeapon { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public ClubNames Club { get; set; }
-        public string PrepareReport()
-        {
-            return $"Tolchok {Name} is {Age} years old is in {Club.ToString()}";
-        }
+        public Clubs ClubInfo { get; set; }
+        public List<Games> TolchoksGames { get; set; }
+        //public string PrepareReport()
+        //{
+        //    return $"Tolchok {Name} is {Age} years old is in {Club.ToString()}";
+        //}
 
     }
 }

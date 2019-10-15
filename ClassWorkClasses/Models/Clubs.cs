@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClassWorkClasses.Models
 {
-    class Clubs
+    public class Clubs
     {
-        public string ClubName { get; set; }
+        public ClubNames ClubName { get; set; }
         public string HeadOfClubName { get; set; }
         public List<string> MembersOfClub { get; set; }
     }

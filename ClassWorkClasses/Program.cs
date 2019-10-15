@@ -38,27 +38,25 @@ namespace ClassWorkClasses
                 Console.WriteLine($"{(int)material} - {material}");
             }            
             player.FavoriteWeapon.MaterialOfWeapon = (WeaponMaterial)int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nChoose your club:");
+            foreach (ClubNames clubName in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
+            {
+                Console.WriteLine($"{(int)clubName} - {clubName}");
+            }
+            player.ClubInfo.ClubName = (ClubNames)int.Parse(Console.ReadLine());
             Console.WriteLine($"{player.Name}'s favorite weapon is {player.FavoriteWeapon.SizeOfWeapon} {player.FavoriteWeapon.MaterialOfWeapon} {player.FavoriteWeapon.TypeOfWeapon}");
-            // Console.WriteLine(player.FavoriteWeaponType);
-            //Console.WriteLine("select your club");
-            //foreach (ClubNames club in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
-            //{
-            //    Console.WriteLine($"{(int)club} - {club}");
-            //}
-            //player.Club = (ClubNames)int.Parse(Console.ReadLine());
-            //Console.WriteLine(player.PrepareReport());
-            //if (player.Club == ClubNames.Brigada)
-            //{
-            //    Console.WriteLine("100% Dexter enrolled!");
-            //}
-            //else if (player.Club == ClubNames.DSE)
-            //{
-            //    Console.WriteLine("Ex Vice Minister is your head");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("noname club");
-            //}
+            if (player.ClubInfo.ClubName == 0)
+            {
+                player.ClubInfo.HeadOfClubName = "Gomes";
+            }
+            else if (player.ClubInfo.ClubName == ClubNames.NewCamp)
+            {
+                player.ClubInfo.HeadOfClubName = "Li";
+            }
+            else
+            {
+                player.ClubInfo.HeadOfClubName = "Berion";
+            }
 
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 

@@ -44,8 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\DateTimeExtensions.cs" />
-    <Compile Include="Models\Club.cs" />
+    <Compile Include="Models\ClubNames.cs" />
     <Compile Include="Models\Clubs.cs" />
+    <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Tolchok.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\WeaponMaterial.cs" />
