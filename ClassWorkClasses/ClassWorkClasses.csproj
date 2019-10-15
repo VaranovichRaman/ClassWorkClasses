@@ -45,7 +45,12 @@
   <ItemGroup>
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Models\Club.cs" />
+    <Compile Include="Models\Clubs.cs" />
     <Compile Include="Models\Tolchok.cs" />
+    <Compile Include="Models\Weapon.cs" />
+    <Compile Include="Models\WeaponMaterial.cs" />
+    <Compile Include="Models\WeaponSize.cs" />
+    <Compile Include="Models\WeaponType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

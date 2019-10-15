@@ -13,31 +13,53 @@ namespace ClassWorkClasses
     {
         static void Main(string[] args)
         {
-            var kris = new Tolchok();
-            kris.Name = "Kris";
-            kris.DateOfBirth = new DateTime(1994, 6, 7);
-            kris.FavoriteWeapon.WeaponSize = 1;
-            Console.WriteLine(kris.FavoriteWeapon);
-            Console.WriteLine("select your club");
-            foreach (ClubNames club in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
+            var player = new Tolchok();
+            Console.WriteLine($"Greatings in TolchUniverse! What's your name?");
+            player.Name = Console.ReadLine();
+            Console.WriteLine($"Hi {player.Name}, when are you born?(date format: yyyy.mm.dd):");
+            player.DateOfBirth = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine($"\nChoose your favorite weapon {player.Name}:");
+            player.FavoriteWeapon = new Weapon();
+            Console.WriteLine($"\nWeapons type:");
+            foreach (WeaponType type in (WeaponType[])Enum.GetValues(typeof(WeaponType)))
             {
-                Console.WriteLine($"{(int) club} - {club}");
+                Console.WriteLine($"{(int)type} - {type}");
             }
-            kris.Club = (ClubNames) int.Parse(Console.ReadLine());
-            Console.WriteLine(kris.PrepareReport());
-            if (kris.Club == ClubNames.Brigada)
+            player.FavoriteWeapon.TypeOfWeapon = (WeaponType)int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nWeapons size:");
+            foreach (WeaponSize size in (WeaponSize[])Enum.GetValues(typeof(WeaponSize)))
             {
-                Console.WriteLine("100% Dexter enrolled!");
+                Console.WriteLine($"{(int)size} - {size}");
             }
-            else if (kris.Club == ClubNames.DSE)
+            player.FavoriteWeapon.SizeOfWeapon = (WeaponSize)int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nWeapons material:");
+            foreach (WeaponMaterial material in (WeaponMaterial[])Enum.GetValues(typeof(WeaponMaterial)))
             {
-                Console.WriteLine("Ex Vice Minister is your head");
-            }
-            else 
-            { 
-                Console.WriteLine("noname club"); 
-            }
-            
+                Console.WriteLine($"{(int)material} - {material}");
+            }            
+            player.FavoriteWeapon.MaterialOfWeapon = (WeaponMaterial)int.Parse(Console.ReadLine());
+            Console.WriteLine($"{player.Name}'s favorite weapon is {player.FavoriteWeapon.SizeOfWeapon} {player.FavoriteWeapon.MaterialOfWeapon} {player.FavoriteWeapon.TypeOfWeapon}");
+            // Console.WriteLine(player.FavoriteWeaponType);
+            //Console.WriteLine("select your club");
+            //foreach (ClubNames club in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
+            //{
+            //    Console.WriteLine($"{(int)club} - {club}");
+            //}
+            //player.Club = (ClubNames)int.Parse(Console.ReadLine());
+            //Console.WriteLine(player.PrepareReport());
+            //if (player.Club == ClubNames.Brigada)
+            //{
+            //    Console.WriteLine("100% Dexter enrolled!");
+            //}
+            //else if (player.Club == ClubNames.DSE)
+            //{
+            //    Console.WriteLine("Ex Vice Minister is your head");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("noname club");
+            //}
+
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 
             Console.ReadLine();

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClassWorkClasses.Models
 {
-    public enum WeaponSize
+    class Clubs
     {
-        Small,
-        Medium,
-        Big
+        public string ClubName { get; set; }
+        public string HeadOfClubName { get; set; }
+        public List<string> MembersOfClub { get; set; }
     }
 }

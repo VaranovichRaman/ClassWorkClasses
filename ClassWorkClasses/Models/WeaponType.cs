@@ -8,8 +8,8 @@ namespace ClassWorkClasses.Models
 {
     public enum WeaponType
     {
-      Bow,
-      Sword,
-      Staff
+        Sword,
+        Bow,
+        Spire
     }
 }

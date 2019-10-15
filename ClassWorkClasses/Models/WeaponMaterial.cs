@@ -8,8 +8,8 @@ namespace ClassWorkClasses.Models
 {
     public enum WeaponMaterial
     {
-        Dural,
         Wood,
+        Duralumin,
         Rubber
     }
 }
