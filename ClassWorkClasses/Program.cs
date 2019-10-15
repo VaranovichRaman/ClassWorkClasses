@@ -59,6 +59,7 @@ namespace ClassWorkClasses
                 player.ClubInfo.HeadOfClubName = "Berion";
             }
             player.ClubInfo.MembersOfClub.Add(player.Name);
+
             
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 
