@@ -39,15 +39,16 @@ namespace ClassWorkClasses
             }            
             player.FavoriteWeapon.MaterialOfWeapon = (WeaponMaterial)int.Parse(Console.ReadLine());
             Console.WriteLine($"\nChoose your club:");
+            player.ClubInfo = new Clubs();
             foreach (ClubNames clubName in (ClubNames[])Enum.GetValues(typeof(ClubNames)))
             {
                 Console.WriteLine($"{(int)clubName} - {clubName}");
             }
             player.ClubInfo.ClubName = (ClubNames)int.Parse(Console.ReadLine());
             Console.WriteLine($"{player.Name}'s favorite weapon is {player.FavoriteWeapon.SizeOfWeapon} {player.FavoriteWeapon.MaterialOfWeapon} {player.FavoriteWeapon.TypeOfWeapon}");
-            if (player.ClubInfo.ClubName == 0)
+            if (player.ClubInfo.ClubName == ClubNames.OldCamp)
             {
-                player.ClubInfo.HeadOfClubName = "Gomes";
+                player.ClubInfo.HeadOfClubName = "Gomes";                
             }
             else if (player.ClubInfo.ClubName == ClubNames.NewCamp)
             {
@@ -57,7 +58,8 @@ namespace ClassWorkClasses
             {
                 player.ClubInfo.HeadOfClubName = "Berion";
             }
-
+            player.ClubInfo.MembersOfClub.Add(player.Name);
+            
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 
             Console.ReadLine();
