@@ -9,7 +9,7 @@ namespace ClassWorkClasses.Models
     public class Games
     {
         public string GameName { get; set; }
-        public string HeadOfGame { get; set; }
+        public string MasterOfGame { get; set; }
         public DateTime GameDate { get; set; }
         public int Contribution { get; set; }
     }
