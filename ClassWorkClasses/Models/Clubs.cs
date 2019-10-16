@@ -10,6 +10,6 @@ namespace ClassWorkClasses.Models
     {
         public ClubNames ClubName { get; set; }
         public string HeadOfClubName { get; set; }
-        public List<string> MembersOfClub { get; set; }
+        public List<Tolchok> MembersOfClub { get; set; }
     }
 }

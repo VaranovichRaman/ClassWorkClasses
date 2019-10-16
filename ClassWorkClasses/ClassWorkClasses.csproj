@@ -48,6 +48,7 @@
     <Compile Include="Models\Clubs.cs" />
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Tolchok.cs" />
+    <Compile Include="Models\TolchokCreation.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\WeaponMaterial.cs" />
     <Compile Include="Models\WeaponSize.cs" />
