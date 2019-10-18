@@ -1,4 +1,5 @@
 ﻿using ClassWorkClasses.Extensions;
+using ClassWorkClasses.Game;
 using ClassWorkClasses.Models;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,7 @@ namespace ClassWorkClasses
             Clubs tolchNewCampClub = new Clubs();
             tolchNewCampClub.MembersOfClub = new List<Tolchok>();
             Clubs tolchSwampCampClub = new Clubs();
-            tolchSwampCampClub.MembersOfClub = new List<Tolchok>();
-            
+            tolchSwampCampClub.MembersOfClub = new List<Tolchok>();         
             
             
             TolchokCreation.Start(flag, tolchOldCampClub, tolchNewCampClub, tolchSwampCampClub);
@@ -55,10 +55,21 @@ namespace ClassWorkClasses
                     Console.WriteLine($"\n{item2.GameName}");
                 }
             }
-
-
-
-
+            Console.WriteLine($"Fuck this clubs, wanna play a real game?");
+            string answerBlackJackPlay = Console.ReadLine();
+            if (answerBlackJackPlay == "y")
+            {
+                BlackJack.BlackJackStart();
+            }
+            else if (answerBlackJackPlay == "n")
+            {
+                Console.WriteLine($"Bad for you. Bye!");
+            }
+            else
+            {
+                Console.WriteLine($"I think you sad \"yes\" so...\n");
+                BlackJack.BlackJackStart();
+            }
 
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 

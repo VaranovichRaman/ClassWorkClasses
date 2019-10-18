@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Game\BlackJack.cs" />
     <Compile Include="Models\ClubNames.cs" />
     <Compile Include="Models\Clubs.cs" />
     <Compile Include="Models\Games.cs" />
