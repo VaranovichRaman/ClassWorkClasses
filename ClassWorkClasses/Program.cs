@@ -70,7 +70,6 @@ namespace ClassWorkClasses
                 Console.WriteLine($"I think you sad \"yes\" so...\n");
                 BlackJack.BlackJackStart();
             }
-
             //var newDate = new DateTime(1945, 5, 9);
             //Console.WriteLine($"{newDate.GetYearsDiff(DateTime.Now)} years from victory of {newDate.GetCentury()} century greatest war"); 
             Console.ReadLine();
